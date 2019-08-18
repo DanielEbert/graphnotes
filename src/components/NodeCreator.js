@@ -1,12 +1,10 @@
 import React, { Component } from 'react'
 
-class AddTodo extends Component {
+class NodeCreator extends Component {
 
   render() {
     if (!this.props.nodeCreatorOpen)
       return null
-
-    //I can save color in upper level to not reset it every time
 
     return (
       <form 
@@ -18,11 +16,12 @@ class AddTodo extends Component {
             top: this.props.nodeCreatorPos.y
           }}>
         <input 
+          className="browser-default"
           type="text" 
           name="title" 
           style={{flex: '10', padding: '5px'}} 
           placeholder="Title"
-          onKeyDown={this.props.exitCreateNewNode}
+          onKeyDown={this.props.nodeCreatorExit}
           value={this.props.nodeCreatorTitle}
           onChange={this.props.nodeCreatorTitleChange}
         />
@@ -37,4 +36,4 @@ class AddTodo extends Component {
   }
 }
 
-export default AddTodo
+export default NodeCreator
