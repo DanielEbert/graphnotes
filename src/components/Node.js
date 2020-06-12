@@ -28,7 +28,8 @@ import Fontfamily from '@ckeditor/ckeditor5-font/src/fontfamily'
 class Node extends Component {
 
   render() {
-    const { id, title, content, posX, posY, width, height, creationDate, modifiedDate } = this.props.note;
+    const { id, title, content, posX, posY, width, height, 
+           completed, creationDate, modifiedDate } = this.props.note;
     return (
       <Draggable
         axis="both"
@@ -49,15 +50,15 @@ class Node extends Component {
               minHeight={'70'}
               onResizeStop={(e, direction, ref, d) => {
                 this.props.scaleNote(id,
-                  this.props.note.width + d.width,
-                  this.props.note.height + d.height
+                  width + d.width,
+                  height + d.height
                 )}}>
             <div style={{height: '100%'}}>
               <div className="handle" style={{paddingBottom:'7px'}}>
                 <label className={"NodeLabel"+id}>
                   <input 
                     type="checkbox" 
-                    checked={this.props.note.completed ? 'checked' : ''} 
+                    checked={completed ? 'checked' : ''} 
                     onChange={this.props.checkedNote.bind(this, id)}
                   />
                   <span style={{height: '0', position: 'inherit', paddingLeft: '0'}}></span>
