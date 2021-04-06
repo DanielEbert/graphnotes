@@ -10,7 +10,7 @@
     "@ckeditor/ckeditor5-build-classic": "^12.0.0",
     "@ckeditor/ckeditor5-editor-classic": "^12.0.0",
     "@ckeditor/ckeditor5-essentials": "^11.0.0",
-    "@ckeditor/ckeditor5-font": "^11.0.0",
+    "@ckeditor/ckeditor5-font": "^27.0.0",
     "@ckeditor/ckeditor5-heading": "^11.0.0",
     "@ckeditor/ckeditor5-highlight": "^11.0.0",
     "@ckeditor/ckeditor5-image": "^13.0.0",
